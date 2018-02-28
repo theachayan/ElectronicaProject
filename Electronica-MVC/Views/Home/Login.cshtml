@@ -1,0 +1,95 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Popular Login Form Widget Flat Responsive Widget Template :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Popular Login Form Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login Sign up Responsive web template, Smart phone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- Custom Theme files -->
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //Custom Theme files -->
+    <!-- web-font -->
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+    <!-- //web-font -->
+    <!-- pop-up-box -->
+    <script src="~/Scripts/jquery-2.2.3.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $('.popup-top-anim').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+        });
+    </script>
+    <!-- //pop-up-box -->
+</head>
+<body>
+    @model Electronica.Manager.ElectronicaDto.LoginDto
+
+    @{
+        ViewBag.Title = "Login";
+    }
+    <!-- login starts here -->
+    <div class="login agile">
+        <div class="w3agile-border">
+            <h2>ELECTRONICA</h2>
+            <div class="login-main login-agileits">
+                <h1>Login</h1>
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                {
+
+                <form action="#" method="post">
+                    <p>Email</p>
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    <p>Password</p>
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                    <input type="submit" value="Login">
+                </form>
+                }
+                <div class="social-btns w3l">
+                    <a class="fa" href="#">Facebook</a>
+                    <a class="g" href="#">Google</a>
+                </div>
+                <h3>Not a member yet ? <a href="#small-dialog" class="sign-in popup-top-anim"> Sign Up Now !</a></h3>
+            </div>
+        </div>
+        <!-- modal -->
+        <div id="small-dialog" class="mfp-hide">
+            <h5 class="w3ls-title">Sign Up</h5>
+            <div class="login-modal login">
+                <form action="#" method="post">
+                    <p>Your Name</p>
+                    <input type="text" placeholder="Your Name" name="name" required="">
+                    <p>Email</p>
+                    <input type="text" placeholder="example@gmail.com" name="mail" required="">
+                    <p>Password</p>
+                    <input type="password" placeholder="Password" name="Password" required="">
+                    <input type="submit" value="Sign Up">
+                </form>
+                <div class="social-btns w3l w3-agileits">
+                    <a class="fa" href="~/Content/face.png"> Facebook</a>
+                    <a class="g" href="~/Content/google.png"> Google</a>
+                </div>
+            </div>
+        </div>
+        <!-- //modal -->
+    </div>
+    <!-- //login ends here -->
+    <!-- copyrights -->
+    <div class="copy-rights wthree">
+
+    </div>
+    <!-- //copyright -->
+    <script src="~/Scripts/jquery.magnific-popup.js"></script>
+
+</body>
+</html>

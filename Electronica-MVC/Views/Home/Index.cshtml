@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Session["UserName"]
+@using (Html.BeginForm("LogOut", "Home", FormMethod.Post))
+{
+<input type="submit" value=" Log Off" class="btn-default"/>
+}

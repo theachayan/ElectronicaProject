@@ -1,0 +1,24 @@
+﻿<link href="~/Content/bootstrap.css" rel="stylesheet" />
+@model IEnumerable<Electronica.Manager.ElectronicaDto.EventDto>
+@{
+    ViewBag.Title = "ShowEvent";
+}
+
+@foreach (var item in ViewBag.listNew)
+{
+  
+<div>@item.EventName</div>  
+ <div class="btn" style="width:75px; height:50px">
+@Html.ActionLink( 
+    "Enroll",
+    "Enrollment",
+    "Home",
+    new
+    {
+
+        EventID = item.EventID
+    },null)
+        </div>
+        
+    <br />
+}
